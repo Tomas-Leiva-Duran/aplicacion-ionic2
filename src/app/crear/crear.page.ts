@@ -10,6 +10,6 @@ export class CrearPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
+  };
 
 }

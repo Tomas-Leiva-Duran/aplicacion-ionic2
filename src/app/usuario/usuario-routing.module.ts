@@ -1,3 +1,4 @@
+import { TablinksPageModule } from './../tablinks/tablinks.module';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -9,8 +10,12 @@ const routes: Routes = [
     component: UsuarioPage
   },
   {
-    path: 'Inicio', redirectTo: 'InicioPage', pathMatch: 'full'
- }
+    path: 'inicio', redirectTo:'inicioPage', pathMatch:'full'
+  },
+  {
+    path: 'inicio',
+    loadComponent: () => import('./tablinks/tablinks.module').then( m => m.TablinksPageModule)
+        }
 ];
 
 @NgModule({

@@ -10,8 +10,8 @@ const routes: Routes = [
     component: InicioPage
   },
   {
-     path: 'usuario', redirectTo: 'UsuarioPage', pathMatch: 'full'
-    //loadChildren: () => import('../usuario/usuario.module').then( m => m.UsuarioPageModule)
+     path: 'usuario', redirectTo: 'UsuarioPage', pathMatch: 'full',
+    loadChildren: () => import('../usuario/usuario.module').then( m => m.UsuarioPageModule)
   }
 ];
 
